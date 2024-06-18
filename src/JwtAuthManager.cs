@@ -15,11 +15,15 @@ namespace JWTLibrary
     public JwtAuthManager(IConfiguration configuration)
     {
       _configuration = configuration.GetSection(nameof(JwtOptions));
+      
+      int.TryParse(_configuration["ExpirationHrs"], out int expirationTime);
+
       _jwtOptions = new JwtOptions
       {
         Key = _configuration["Key"],
         Issuer = _configuration["Issuer"],
         Audience = _configuration["Audience"],
+        ExpirationHrs =  expirationTime | 1,
       };
     }
 
@@ -36,7 +40,7 @@ namespace JWTLibrary
       var tokenDescriptor = new SecurityTokenDescriptor
       {
         Subject = new ClaimsIdentity(claimsAuth),
-        Expires = DateTime.UtcNow.AddHours(1),
+        Expires = DateTime.UtcNow.AddHours(_jwtOptions.ExpirationHrs),
 
         // Don't forget to add Issuer and Audience
         Issuer = _jwtOptions.Issuer,
