@@ -16,14 +16,14 @@ namespace JWTLibrary
     {
       _configuration = configuration.GetSection(nameof(JwtOptions));
       
-      int.TryParse(_configuration["ExpirationHrs"], out int expirationTime);
+      // int.TryParse(_configuration["ExpirationHrs"], out int expirationTime);
 
       _jwtOptions = new JwtOptions
       {
         Key = _configuration["Key"],
         Issuer = _configuration["Issuer"],
         Audience = _configuration["Audience"],
-        ExpirationHrs =  expirationTime | 1,
+        ExpirationHrs =  int.TryParse(_configuration["ExpirationHrs"], out int expirationTime) ? expirationTime: 1,
       };
     }
 
