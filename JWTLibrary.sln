@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JWTLibrary", "src\JWTLibrary.csproj", "{64A8926C-6115-4E32-A8B9-AC0E2961840F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JwtAuthWeb", "test\JwtAuthWeb.csproj", "{9B544482-EBA9-43C3-B30F-BA212ADD0BB4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{64A8926C-6115-4E32-A8B9-AC0E2961840F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{64A8926C-6115-4E32-A8B9-AC0E2961840F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{64A8926C-6115-4E32-A8B9-AC0E2961840F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B544482-EBA9-43C3-B30F-BA212ADD0BB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B544482-EBA9-43C3-B30F-BA212ADD0BB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B544482-EBA9-43C3-B30F-BA212ADD0BB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B544482-EBA9-43C3-B30F-BA212ADD0BB4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
