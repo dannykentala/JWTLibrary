@@ -1,6 +1,6 @@
 using System.Security.Claims;
 using JWTLibrary;
-using JWTLibrary.Models;
+using JwtAuthWeb.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace JwtAuthWeb.Controllers
@@ -28,5 +28,4 @@ namespace JwtAuthWeb.Controllers
       return _jwtAuthManager.GenerateToken(claims);
     }
   }
-
 }
